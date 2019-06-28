@@ -19,6 +19,6 @@ from booktest import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('booktest.urls')),
+    path('booktest/', include('booktest.urls')),
 
 ]
