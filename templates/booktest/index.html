@@ -8,11 +8,11 @@
 <h1>hello world</h1>
 {#{{ title }}#}
 <ul>
-{% for book in title %}
-<li>{{ book.b_title }}</li>
+
+    {% for book in title %}
+        <li><a href={{ book.id }}>{{ book.b_title }}</a></li>
 
 
-{%endfor%}</ul>
-我的
+    {% endfor %}</ul>
 </body>
 </html>

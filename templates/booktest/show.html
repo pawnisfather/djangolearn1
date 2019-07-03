@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hero</title>
+
+</head>
+<body>
+<ul>
+
+    {% if hero == None %}
+        <li>该书没有hero信息</li>
+    {% else %}
+        {% for hero_1 in hero %}
+        <li>{{ hero_1 }}</li>
+        {% endfor %}
+
+    {% endif %}
+
+</ul>
+</body>
+</html>
