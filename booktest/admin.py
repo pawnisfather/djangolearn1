@@ -24,3 +24,4 @@ class BookInfoAdmin(admin.ModelAdmin):
 
 admin.site.register(BookInfo, BookInfoAdmin)
 admin.site.register(HeroInfo)
+admin.site.register(Lession)

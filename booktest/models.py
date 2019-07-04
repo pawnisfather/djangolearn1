@@ -18,3 +18,7 @@ class HeroInfo(models.Model):
 
     def __str__(self):
         return self.h_name
+
+
+class Lession(models.Model):
+    l_name = models.CharField
