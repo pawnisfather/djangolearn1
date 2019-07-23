@@ -29,3 +29,13 @@ def show(request, id):
 def year(request, year):
     content = {'year': year}
     return render(request, 'booktest/year.html', content)
+
+
+def post(request):
+    return render(request, 'booktest/postTest2.html')
+
+
+def post2(request):
+    print(request.method)
+    print(request.POST)
+    return render(request, 'booktest/postTest1.html', context=request.POST)
