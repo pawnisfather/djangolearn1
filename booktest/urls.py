@@ -8,6 +8,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('<year:year>', views.year),
     path('<int:id>', views.show),
+    path('getTest1', views.getTest1),
     path('postTest2/',views.post),
     path('postTest1/',views.post2),
     path('login/',views.session1),

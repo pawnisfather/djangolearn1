@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect as redirect
+
 from .models import *
 
 
@@ -10,9 +10,9 @@ def index(request):
     return render(request, 'booktest/index.html', context)
 
 
-def show(request, id):
+def show(request, id_s):
     # hero_info = HeroInfo.objects.get(pk=id)
-    book = BookInfo.objects.get(pk=id)
+    book = BookInfo.objects.get(pk=id_s)
 
     num_count = book.heroinfo_set.all()
     print(num_count.count())
@@ -29,6 +29,13 @@ def show(request, id):
 def year(request, year):
     content = {'year': year}
     return render(request, 'booktest/year.html', content)
+
+
+def getTest1(request):
+    content = request.body
+    content2 = request.GET.dict()
+    print(content2)
+    return render(request, 'booktest/getTest1.html', content2)
 
 
 def post(request):
