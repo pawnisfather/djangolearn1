@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.http import HttpResponseRedirect as redirect
 from .models import *
 
 
@@ -39,3 +39,25 @@ def post2(request):
     print(request.method)
     print(request.POST)
     return render(request, 'booktest/postTest1.html', context=request.POST)
+
+
+def session1(request):
+    uname = request.session['myname']
+
+    context = {'uname': uname}
+    return render(request, 'booktest/session1.html', context=context)
+
+
+def session2(request):
+    return render(request, 'booktest/session2.html')
+
+
+def session3(request):
+    uname = request.POST['uname']
+    request.session['myname'] = uname
+    # print(request.session)
+    return redirect('/booktest/login/')
+    # return render(request, 'booktest/session3.html')
+
+# def session4(requset):
+#     del

@@ -10,6 +10,9 @@ urlpatterns = [
     path('<int:id>', views.show),
     path('postTest2/',views.post),
     path('postTest1/',views.post2),
+    path('login/',views.session1),
+    path('session2/',views.session2),
+    path('session3/',views.session3),
     # path()
     # re_path(),
 
