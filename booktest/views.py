@@ -1,6 +1,5 @@
-from django.http import HttpResponseRedirect as redirect
 from django.shortcuts import render
-
+from django.http import HttpResponseRedirect as redirect
 from .models import *
 
 
@@ -11,9 +10,9 @@ def index(request):
     return render(request, 'booktest/index.html', context)
 
 
-def show(request, id):
+def show(request, id_s):
     # hero_info = HeroInfo.objects.get(pk=id)
-    book = BookInfo.objects.get(pk=id)
+    book = BookInfo.objects.get(pk=id_s)
 
     num_count = book.heroinfo_set.all()
     print(num_count.count())
@@ -60,10 +59,5 @@ def session3(request):
     return redirect('/booktest/login/')
     # return render(request, 'booktest/session3.html')
 
-
 # def session4(requset):
 #     del
-
-def indexjicheng(request):
-    content2 = {'content2':'<hr>'}
-    return render(request, 'booktest/index2.html',content2)
