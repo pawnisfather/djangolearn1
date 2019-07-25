@@ -13,6 +13,7 @@ urlpatterns = [
     path('login/',views.session1),
     path('session2/',views.session2),
     path('session3/',views.session3),
+    path('index2/',views.indexjicheng),
     # path()
     # re_path(),
 

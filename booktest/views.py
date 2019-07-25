@@ -1,5 +1,6 @@
-from django.shortcuts import render
 from django.http import HttpResponseRedirect as redirect
+from django.shortcuts import render
+
 from .models import *
 
 
@@ -59,5 +60,10 @@ def session3(request):
     return redirect('/booktest/login/')
     # return render(request, 'booktest/session3.html')
 
+
 # def session4(requset):
 #     del
+
+def indexjicheng(request):
+    content2 = {'content2':'<hr>'}
+    return render(request, 'booktest/index2.html',content2)
