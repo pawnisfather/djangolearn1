@@ -8,13 +8,13 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('<year:year>', views.year),
     path('<int:id>', views.show),
-    path('getTest1', views.getTest1),
+    # path('getTest1', views.getTest1),
     path('postTest2/',views.post),
     path('postTest1/',views.post2),
     path('login/',views.session1),
     path('session2/',views.session2),
     path('session3/',views.session3),
-    path('index2/',views.indexjicheng),
+    # path('index2/',views.indexjicheng),
     # path()
     # re_path(),
 

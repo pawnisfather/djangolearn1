@@ -1,3 +1,4 @@
+{% for static in  %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,7 @@
 <h1>hello world</h1>
 {#{{ title }}#}
 <ul>
+<img src="/sic/images/booktest/1.jpg" name="111" title="222">
 
     {% for book in title %}
         <li><a href={{ book.id }}>{{ book.b_title }}</a></li>
